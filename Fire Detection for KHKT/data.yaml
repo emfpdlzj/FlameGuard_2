@@ -1,0 +1,13 @@
+train: /Users/emfpdlzj/Downloads/Fire Detection for KHKT/train/images
+val: /Users/emfpdlzj/Downloads/Fire Detection for KHKT/valid/images
+test: /Users/emfpdlzj/Downloads/Fire Detection for KHKT/test/images
+
+nc: 8
+names: ['0', '1', '2', '3', '4', 'fire', 'object', 'smoke']
+
+roboflow:
+  workspace: kuumoneko
+  project: fire-detection-for-khkt
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/kuumoneko/fire-detection-for-khkt/dataset/1

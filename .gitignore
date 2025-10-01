@@ -1,0 +1,33 @@
+cat > .gitignore << 'EOF'
+# macOS
+.DS_Store
+
+# Node/Next
+node_modules/
+.next/
+out/
+dist/
+build/
+.pnpm-store/
+.vite/
+*.log
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.mypy_cache/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+EOF
+
+./Fire Detection for KHKT/*
