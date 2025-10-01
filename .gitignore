@@ -30,4 +30,5 @@ __pycache__/
 .idea/
 EOF
 
-./Fire Detection for KHKT/*
+./'Fire Detection for KHKT'/*
+./'Fire Detection for KHKT'/*/
