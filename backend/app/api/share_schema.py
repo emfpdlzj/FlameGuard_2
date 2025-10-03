@@ -1,6 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+
 
 # common schema
 class User(BaseModel):
@@ -18,7 +19,6 @@ class User(BaseModel):
         from_attributes = True
 
 
-
 class DetectionLog(BaseModel):
     id: int
     file_name: Optional[str] = None
@@ -29,5 +29,5 @@ class DetectionLog(BaseModel):
     has_fire: bool
     created_at: datetime
 
-    class Config:
-        orm_mode = True
+    # SQLAlchemy 객체를 바로 응답으로 직렬화하려면 필요
+    model_config = ConfigDict(from_attributes=True)
