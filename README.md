@@ -40,7 +40,7 @@ fastapi dev app/main.py
 ```
 
 postman
-[!](./스크린샷%202025-10-03%2019.41.27.png)
+![](./postman.png)
 
 
 ## frontend
@@ -58,6 +58,11 @@ pnpm run dev
 npm install 0g pnpm@latest-10
 pnpm run dev
 
-pnpm add @tanstack/react-query
 
 ```
+![](./video-log.png)
+
+### 추가과제
+1. 화재 감지 로그 페이지에서 Home으로 이동하는 버튼 추가
+2. 감지 민감도 설정을 개선하여 0.7이하의 감지는 무시하도록 필터링
+3. CSS 스타일을 보기좋게 개선 
