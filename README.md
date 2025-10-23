@@ -8,8 +8,6 @@ YOLOv11 기반 추론(FastAPI) + Next.js 프런트엔드로 구성되며, 감지
 * 🔥 YOLOv11로 불꽃/연기 객체 감지 (신뢰도 임계값 설정 가능)
 * 🎥 웹캠/비디오 스트림 실시간 처리
 * 🗂 감지 결과(시간/신뢰도/스냅샷) 저장 및 로그 페이지 제공
-* 🔐 Argon2 기반 비밀번호 해싱(향후 사용자 계정/인증 확장 대비)
-* 🧪 Postman으로 API 테스트 가능
 
 ---
 
@@ -42,58 +40,6 @@ FlameGuard_2/
    ├─ (Next.js 프로젝트 파일들)
    └─ public/
 ```
-
-> 설계 관점: **기능(엔드포인트) 중심의 모듈화(feature-based modularization)**
-
----
-
-## 빠른 실행
-
-### 1) Backend (FastAPI)
-
-```bash
-cd backend/
-
-# (권장) Conda 환경
-conda create -n flameguard python=3.11 -y
-conda activate flameguard
-
-# 의존성 설치
-pip install -r requirements.txt
-# ultralytics, fastapi[all], sqlalchemy, pydantic, argon2-cffi 등
-
-# 개발 서버 실행
-fastapi dev app/main.py
-# 또는: uvicorn app.main:app --reload
-```
-
-* 기본 주소: [http://localhost:8000](http://localhost:8000)
-* 문서: [http://localhost:8000/docs](http://localhost:8000/docs) (Swagger UI)
-
-### 2) Frontend (Next.js)
-
-```bash
-cd frontend/
-
-# pnpm 설치(없다면)
-# npm install -g pnpm@latest-10
-
-# 프로젝트 생성(최초 1회)
-npx create-next-app@latest
-
-# 실행
-pnpm install
-pnpm run dev
-# http://localhost:3000
-```
-
-`frontend/.env.local` (예시)
-
-```
-NEXT_PUBLIC_API_BASE=http://localhost:8000
-```
-
----
 
 ## Conda / 유틸 메모
 
